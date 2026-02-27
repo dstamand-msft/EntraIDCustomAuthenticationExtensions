@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/EntraIDCustomAuthenticationExtensionsInProcess/EntraIDCustomAuthenticationExtensionsInProcess.csproj" />
+  <Project Path="src/EntraIDCustomAuthenticationExtensionsIsolated/EntraIDCustomAuthenticationExtensionsIsolated.csproj" />
+</Solution>
