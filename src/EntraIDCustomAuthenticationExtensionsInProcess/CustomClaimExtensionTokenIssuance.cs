@@ -19,12 +19,12 @@ namespace EntraIDCustomAuthenticationExtensionsInProcess
             _logger = logger;
         }
 
-        //[FunctionName("onTokenIssuanceStart")]
-        //public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "POST")] HttpRequest request)
-        //{
-        //    System.Diagnostics.Debugger.Break();
-        //    return new StatusCodeResult(200);
-        //}
+        [FunctionName("onTokenIssuanceStartDebug")]
+        public Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "POST")] HttpRequest request)
+        {
+            System.Diagnostics.Debugger.Break();
+            return Task.FromResult<IActionResult>(new StatusCodeResult(200));
+        }
 
         [FunctionName("onTokenIssuanceStart")]
         public WebJobsAuthenticationEventResponse Run([WebJobsAuthenticationEventsTrigger] WebJobsTokenIssuanceStartRequest request)
